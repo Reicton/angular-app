@@ -1,0 +1,30 @@
+<!-- HTML数据绑定     创建实例对象和JSON序列化不行-->
+<div class="com5">
+    <p class="com5-1">自定义组件5</p>
+    <div>用户名:{{uname}}</div>
+    <div>年龄:{{age}}</div>
+    <div>{{8*8}}</div>
+    <div>{{8*8>1}}</div>
+    <div>{{'你好'&&1+1===2&&8*8===64&&'逻辑正确'}}</div>
+    <div>{{1+1>1?'正确':'错误'}}</div>
+    <div>{{sayHello('你好')}}</div>
+    <div>{{uname.length}}</div>
+    <div>{{uname.split('')}}</div>
+    <div>{{uname.toUpperCase()}}</div>
+    <div>{{uname[0]}}</div>
+    <div>{{uname.indexOf('R')}}</div>
+</div>
+<hr>
+<div *ngIf="apple.price*apple.number>0">
+    <button (click)="increment()">+</button>&nbsp;&nbsp;<span>{{apple.price*apple.number}}</span>&nbsp;&nbsp;<button
+        (click)="decrement()">-</button><br>
+</div>
+
+
+<!-- 属性绑定 -->
+<p [title]="descriptions">摈榔加烟，法力无边</p>
+<hr>
+
+<!-- 事件绑定 -->
+<button (click)="modalName()">点击弹窗用户名</button>
+<hr>

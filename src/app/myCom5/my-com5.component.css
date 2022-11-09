@@ -1,0 +1,11 @@
+.com5-1{
+    background-color: gray;
+    color: white;
+    font-size: 35px;
+    padding:  8px 24px;
+}
+.com5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
