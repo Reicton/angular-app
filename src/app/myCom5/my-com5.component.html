@@ -13,11 +13,13 @@
     <div>{{uname.toUpperCase()}}</div>
     <div>{{uname[0]}}</div>
     <div>{{uname.indexOf('R')}}</div>
+    <div [title]="'当前购买数量'+descriptions">模板字符串</div>
 </div>
 <hr>
 <div *ngIf="apple.price*apple.number>0">
-    <button (click)="increment()">+</button>&nbsp;&nbsp;<span>{{apple.price*apple.number}}</span>&nbsp;&nbsp;<button
-        (click)="decrement()">-</button><br>
+    苹果:￥10
+    <button (click)="increment()">+</button>&nbsp;&nbsp;<span>{{apple.number}}</span>&nbsp;&nbsp;<button
+        (click)="decrement()">-</button>总价:{{apple.price*apple.number}}<br>
 </div>
 
 
