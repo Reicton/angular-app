@@ -1,0 +1,22 @@
+<div>
+    <p>
+        angular之ngIf使用
+    </p>
+    <div *ngIf="isVip;else showNotVip">
+        你是会员,你能阅读此内容,xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    </div>
+    <ng-template #showNotVip>
+        <div>
+            你不是会员,你无法阅读此内容
+        </div>
+    </ng-template>
+    <button (click)="cancleVip()">{{isVip?'取消会员':'开通会员'}}</button>
+</div>
+
+<!-- ngif后面跟布尔表达式,如果为false,则从DOM树上移除 -->
+<!-- ngIf="布尔值;else else块的编号" -->
+<!--
+    <ng-template #else块的编号>
+        任何标签
+    </ng-template>
+-->

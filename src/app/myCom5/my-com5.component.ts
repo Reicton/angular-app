@@ -20,7 +20,6 @@ export class MyCom5Component {
   };
   descriptions = '这是一段文字说明';
   sayHello(params: string) {
-    console.log(params);
 
   };
   modalName() {

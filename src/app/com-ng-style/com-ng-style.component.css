@@ -1,0 +1,14 @@
+.btn{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+.btn-danger{
+    background-color: red;
+}
+.btn-success{
+    background-color: green;
+}

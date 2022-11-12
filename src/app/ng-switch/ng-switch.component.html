@@ -1,0 +1,16 @@
+<!-- 
+    什么情况下使用中括号，什么情况下使用星号
+    结合ngSwitch,ngSwitchCase,ngSwitchDefault三种使用方式理解
+ -->
+<!-- 
+    结构型指令: 例如*ngIf,*ngFor,会影响DOM结构
+    属性型指令：例如[ngClass],[ngStyle],不会影响DOM结构
+  -->
+<!-- 案例，根据 -->
+<div *ngIf="true" [ngSwitch]="userLevel">
+    <h3>招商银行</h3>
+    <p *ngSwitchCase="'normal'">欢迎普通用户</p>
+    <p *ngSwitchCase="'vip'">欢迎vip用户</p>
+    <p *ngSwitchCase="'blackGold'">欢迎黑金用户</p>
+    <p *ngSwitchDefault>您尚未登录</p>
+</div>

@@ -49,14 +49,14 @@ import { GoodTestComponent } from './good-test/good-test.component';
     zzmmPie,
     moneyPipe,
     CreateObjComponent,
-    GoodTestComponent
+    GoodTestComponent 
   ],
   imports: [
     BrowserModule,  //浏览器模块，包含了CommonModule,不包含FormsModule
     AppRoutingModule, //路由模块
-    FormsModule //表单模块,
+    FormsModule //表单模块
   ],
   providers: [],
-  bootstrap: [AppComponent] //初始化引导组件
+
 })
 export class AppModule { }

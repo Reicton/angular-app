@@ -1,0 +1,16 @@
+<!--
+     ngModel双向数据绑定 ==> [(ngModel)] 必须导出FormsModule模块，BrowserModule也必须导出
+     model数据影响view试图
+     view操作视图(例如表单元素)影响model
+     ngModelChange是angular中模型数据改变专用事件
+-->
+<!-- 
+    vue.js和angular中数据绑定原理有何不同
+ -->
+<hr>
+<div>
+    <h3>双向数据绑定</h3>
+    <input [(ngModel)]="uname" type="text" placeholder="请输入用户名" (ngModelChange)="changeUname()">
+    <span>用户名:{{uname}}</span>
+</div>
+<hr>

@@ -1,0 +1,13 @@
+<div>
+    <h3>待办事项练习-todoList</h3>
+    <p>
+        <span>待办名称:</span>
+        <input [(ngModel)]="content" type="text" placeholder="请输入...">
+        <button (click)="toAdd()">添加</button>
+    </p>
+    <p *ngIf="todoList.length==0">没有待办事项,去添加一些吧...</p>
+    <ul>
+        <li *ngFor="let item of todoList;index as i">{{item}} <button (click)="deleteList(item)">删除</button></li>
+    </ul>
+</div>
+<hr>

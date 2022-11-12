@@ -1,0 +1,17 @@
+<div>
+    <p>angular之循环指令使用</p>
+    <ul>
+        <li *ngFor="let e of personList">{{e}}</li>
+    </ul>
+    <ul>
+        <li *ngFor="let y of personList;index as x;">
+            {{x}}-{{y}}
+        </li>
+    </ul>
+</div>
+<!--
+     总结
+    let 临时变量 of 数据;
+    let i = index;
+    index as i;
+-->

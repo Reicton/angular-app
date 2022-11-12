@@ -1,0 +1,12 @@
+.box{
+    background-color: skyblue;
+    margin: 100px auto; 
+    width: 1200px;
+    height: 500px;
+}
+table{
+    border-collapse: collapse;
+}
+table tr td {
+    border: 1px solid gray;
+}

@@ -1,0 +1,8 @@
+<div>
+    <button (click)="noMore()" class="btn" *ngIf="loadMore;else cancleLoad">加载更多</button>
+    <ng-template #cancleLoad>
+        <hr>
+        <p>我是有底线的</p>
+    </ng-template>
+
+</div>

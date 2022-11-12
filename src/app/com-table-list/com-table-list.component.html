@@ -1,0 +1,41 @@
+<!-- 
+    管道的概念(Pipe)
+    {{原始数据|管道名}}
+    angular提供了一些预定义常用管道
+    1、全部转换成小写的lowercase
+    2、全部转换成大写的uppercase
+    3、转换为首字母大写titlecase
+    4、只显示字符串的一部分 slice:开始下标:结束小标
+    5、json把JS对象序列化JSON字符串方便调试;
+    6、金额number:'4.1-4',小数点前面最少有四位，小数点后面最少一位，最多四位
+    7、currency把数字转换为货币格式字符串，货币符号+三位一逗号+二位小数位
+    {{num|currency}}
+    {{num|currency:'货币符号'}}
+    8、日期管道 date    
+
+ -->
+<div class="box">
+    <table width="100%">
+        <thead>
+            <th colspan="6">人员列表</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of emList">
+                <td>{{item.sname}}</td>
+                <td>{{item.sex|sexFormat:'en'}}</td>
+                <td>{{item.birthday|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                <td>{{item.salary | currency:'￥'}}</td>
+                <td>{{item.zzmm|zzmmFormat}}</td>
+                <td><button (click)="removeEm(item.sname)">删除</button></td>
+            </tr>
+            <tr *ngIf="emList.length==0">
+                <td colspan="6" style="text-align:center ;">
+                    没有人员信息
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div>{{emList | json}}</div>
+<hr>
