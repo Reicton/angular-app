@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-com5.component.css']
 })
 export class MyCom5Component {
+  public siyou: string[] = ['黄瓜', '西红柿', '菠菜'];
+
   // MVVM Model模型数据
   uname = 'Recton';
   age = 25;

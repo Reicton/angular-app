@@ -1,0 +1,11 @@
+.child2{
+    width: 1000px;
+    height: 300px;
+    background-color: pink;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+.child2>span{
+    font-size: 50px;
+}

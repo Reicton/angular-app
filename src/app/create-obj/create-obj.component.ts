@@ -8,7 +8,7 @@ import { LogService } from '../log.service';
 })
 export class CreateObjComponent implements OnInit {
   //组件服务使用者，必须声明依赖
-  constructor( private log: LogService) { //声明依赖
+  constructor(private log: LogService) { //声明依赖
   }
 
   ngOnInit(): void {

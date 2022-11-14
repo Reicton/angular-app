@@ -1,0 +1,16 @@
+<div class="box">
+    <h2>{{uname}}的博客</h2>
+    <child1 (someEvent)="changeName($event)"></child1>
+    <child2 [contackName]="uname"></child2>
+</div>
+<!-- 路由跳转 -->
+<button routerLink="/todo-list">点击跳转到待办事项</button>
+<!-- 脚本跳转 -->
+<button (click)="jump()">JS跳转</button>
+<!-- 商品详情页 -->
+<a href="" routerLink="/detail/1">苹果</a>&nbsp;&nbsp;&nbsp;
+<a href="" routerLink="/detail/2">香蕉</a>&nbsp;&nbsp;&nbsp;
+<a href="" routerLink="/detail/3">西瓜</a>&nbsp;&nbsp;&nbsp;
+<a href="" routerLink="/user-center">用户中心</a>&nbsp;&nbsp;&nbsp;
+<!-- 脚本跳转传参 -->
+<button (click)="jump1(3)">详情页</button>

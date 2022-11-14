@@ -4,6 +4,7 @@ import { Injectable } from "@angular/core";
     providedIn: 'root' //指当前的服务对象在"根模块中提供"，换句话说就是AppModule根模块提供,提供者
 })  //所有服务对象都是"可被注入的"
 export class LogService {  // 这个类是服务对象
+    private language: string = '中文';
     doLog(action: any) {
         let uname = 'admin2';/*  */
         let date = new Date().getTime()

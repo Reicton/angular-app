@@ -1,10 +1,10 @@
-import { Pipe } from "@angular/core";
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
     name: 'moneyFormat'
 })
 
-export class moneyPipe {
+export class moneyPipe implements PipeTransform {
     transform(val: number) {
         return '￥' + val.toLocaleString()
     }

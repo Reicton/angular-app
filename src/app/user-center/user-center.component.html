@@ -1,0 +1,26 @@
+<div>
+    <h3>用户中心</h3>
+    <ul>
+        <li routerLink="/user-center/index">首页</li>
+        <li routerLink="/user-center/money">钱包</li>
+        <li routerLink="/user-center/order">订单</li>
+    </ul>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    <button nz-button nzType="primary" (click)="open()">Open</button>
+    <nz-drawer
+      [nzClosable]="true"
+      [nzVisible]="visible"
+      nzPlacement="right"
+      nzTitle="基础抽屉"
+      (nzOnClose)="close()"
+    >
+      <ng-container *nzDrawerContent>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </ng-container>
+    </nz-drawer>
+    <table-ui></table-ui>
+</div>

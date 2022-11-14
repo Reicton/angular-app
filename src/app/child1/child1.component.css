@@ -1,0 +1,22 @@
+.child1{
+    width: 600px;
+    height: 100px;
+    background-color: tomato;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child1>input{
+    height: 35px;
+    outline:none;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+.child1>button{
+    height: 35px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
