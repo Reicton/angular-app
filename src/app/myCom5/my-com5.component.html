@@ -1,28 +1,25 @@
 <!-- HTML数据绑定     创建实例对象和JSON序列化不行-->
 <div class="com5">
-    <p class="com5-1">自定义组件5</p>
-    <div>用户名:{{uname}}</div>
-    <div>年龄:{{age}}</div>
-    <div>{{8*8}}</div>
-    <div>{{8*8>1}}</div>
-    <div>{{'你好'&&1+1===2&&8*8===64&&'逻辑正确'}}</div>
-    <div>{{1+1>1?'正确':'错误'}}</div>
-    <div>{{sayHello('你好')}}</div>
-    <div>{{uname.length}}</div>
-    <div>{{uname.split('')}}</div>
-    <div>{{uname.toUpperCase()}}</div>
-    <div>{{uname[0]}}</div>
-    <div>{{uname.indexOf('R')}}</div>
-    <div [title]="'当前购买数量'+descriptions">模板字符串</div>
-    <ul>
-        <li *ngFor="let item of siyou">{{item}}</li>
-    </ul>
+  <p class="com5-1">自定义组件5</p>
+  <div>用户名:{{uname}}</div>
+  <div>年龄:{{age}}</div>
+  <div>{{8*8}}</div>
+  <div>{{8*8>1}}</div>
+  <div>{{'你好'&&1+1===2&&8*8===64&&'逻辑正确'}}</div>
+  <div>{{1+1>1?'正确':'错误'}}</div>
+  <div>{{sayHello('你好')}}</div>
+  <div>{{uname.length}}</div>
+  <div>{{uname.split('')}}</div>
+  <div>{{uname.toUpperCase()}}</div>
+  <div>{{uname[0]}}</div>
+  <div>{{uname.indexOf('R')}}</div>
+  <div [title]="'当前购买数量'+descriptions">模板字符串</div>
 </div>
 <hr>
 <div *ngIf="apple.price*apple.number>0">
-    苹果:￥10
-    <button (click)="increment()">+</button>&nbsp;&nbsp;<span>{{apple.number}}</span>&nbsp;&nbsp;<button
-        (click)="decrement()">-</button>总价:{{apple.price*apple.number}}<br>
+  苹果:￥10
+  <button (click)="increment()">+</button>&nbsp;&nbsp;<span>{{apple.number}}</span>&nbsp;&nbsp;<button
+    (click)="decrement()">-</button>总价:{{apple.price*apple.number}}<br>
 </div>
 
 
@@ -34,6 +31,30 @@
 <button (click)="modalName()">点击弹窗用户名</button>
 <hr>
 
+<div style="width: 500px; height: 200px; background-color: red;">
+  <nz-table #headerTable [nzData]="listOfData" [nzPageSize]="50" [nzScroll]="{ y: '200px' }"
+    [nzFrontPagination]="false">
+    <thead>
+      <tr>
+        <th nzWidth="150px">Name</th>
+        <th nzWidth="150px">Age</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of headerTable.data">
+        <td>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.address }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
+
+<hr>
+<p *ngFor="let sondata of zifu">
+  {{sondata}}
+</p>
 <!--
      指令绑定,angular中的指令系统, vue中常用指令,v-on v-bind v-if , v-model,v-for,v-html,v-show,v-text
      v-on在angular中用小括号代替,属性绑定用中括号代替

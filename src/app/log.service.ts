@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 export class LogService {  // 这个类是服务对象
     private language: string = '中文';
     doLog(action: any) {
-        let uname = 'admin2';/*  */
+        let uname = 'admin2';/* 人名 */
         let date = new Date().getTime()
         console.log(`人员:${uname},时间:${date},事件:${action}`);
     }

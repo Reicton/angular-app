@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Inject,LOCALE_ID } from '@angular/core';
+import { formatDate } from '@angular/common';
 @Component({
   selector: 'todo-list',
   templateUrl: './com-todo-list.component.html',
@@ -8,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class ComTodoListComponent implements OnInit {
   todoList = ['开会', '吃饭', '回家'];
   content = '';
-  constructor() { }
+  date:any = [];
 
+  constructor(
+    @Inject(LOCALE_ID) private locale:string
+  ) { }
+  
   ngOnInit(): void {
+  }
+  onChange(result: any[]): void {
+    if(result.length!=0){
+      result[0]=formatDate(result[0], 'yyyy-MM-dd', this.locale)
+      result[1]=formatDate(result[1], 'yyyy-MM-dd', this.locale)
+    }
   }
   toAdd() {
     this.todoList.push(this.content);

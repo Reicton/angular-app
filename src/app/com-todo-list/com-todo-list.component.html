@@ -11,3 +11,8 @@
     </ul>
 </div>
 <hr>
+<nz-range-picker [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-range-picker> 
+<div>
+    <p><span>开始时间:</span>{{date[0]}}</p>
+    <p><span>结束时间:</span>{{date[1]}}</p>
+</div>

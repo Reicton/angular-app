@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
 import { myCom1 } from './myCom1/myCom1';
 import { myCom2 } from './myCom2/mycom2.component';
@@ -42,21 +43,38 @@ import { LoginGuard } from './login.guard';
 import { TimeGuard } from './time.guard';
 
 // UI组件模块
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { TableUiComponent } from './table-ui/table-ui.component';
-
-
+import { FormElementComponent } from './form-element/form-element.component';
+import { DataViewComponent } from './data-view/data-view.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
+registerLocaleData(zh)
 // 生命路由词典-路由地址和路由组件对应的集合
 const routes: Route[] = [
   //路由重定向
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   // 正常路由
-  { path: 'home', component: ParentComponent },
+  { path: 'home', component: MyCom5Component },
   { path: 'todo-list', component: ComTodoListComponent },
   { path: 'table-list', component: ComTableListComponent },
+  { path: 'form-element', component: FormElementComponent },
+  { path: 'data-view', component: DataViewComponent },
+  { path: 'register-user', component: RegisterUserComponent },
+  { path: 'dropdown-view', component: DropdownComponent },
   // 路由首位(Guard)
   {
     path: 'user-center',
@@ -116,17 +134,31 @@ const routes: Route[] = [
     UserIndexComponent,
     UserMoneyComponent,
     UserOrderComponent,
-    TableUiComponent
+    TableUiComponent,
+    FormElementComponent,
+    DataViewComponent,
+    RegisterUserComponent,
+    DropdownComponent,
   ],
   imports: [
     BrowserModule,  //浏览器模块，包含了CommonModule,不包含FormsModule
     FormsModule, //表单模块,
     HttpClientModule,  //提供http服务模模块
-    RouterModule.forRoot(routes), //注册路由词典
+    ReactiveFormsModule,
     NzButtonModule,
     NzTableModule,
+    NzCheckboxModule,
     NzDividerModule,
-    NzDrawerModule
+    NzIconModule,
+    NzDrawerModule,
+    NzDropDownModule,
+    NzGridModule,
+    NzSelectModule,
+    NzInputModule,
+    NzFormModule,
+    NzDatePickerModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(routes), //注册路由词典
   ],
   providers: [],
   bootstrap: [AppComponent] //初始化引导组件

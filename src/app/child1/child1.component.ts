@@ -9,11 +9,13 @@ export class Child1Component implements OnInit {
   inputName: string = ''
 
   // 想要给父组件传值，需要使用事件发射器
+  // 输入属性是@Input,输出是Output
   @Output()
   someEvent: any = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   changeInputName() {

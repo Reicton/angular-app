@@ -1,0 +1,10 @@
+<a nz-dropdown [nzDropdownMenu]="menu">
+    详情
+    <i nz-icon nzType="down"></i>
+</a>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu nzSelectable>
+        <li nz-menu-item>诊断详情</li>
+        <li nz-menu-item>用药详情</li>
+    </ul>
+</nz-dropdown-menu>
